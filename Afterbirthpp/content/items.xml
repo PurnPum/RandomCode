@@ -1,0 +1,28 @@
+<items gfxroot="gfx/items/" version="1">
+	<passive cache="damage firedelay speed shotspeed luck" description="All stats down. Luck up" gfx="test.png" name="Fake 4-head Clover" />
+	<passive description="Your surroundings feel larger" gfx="test.png" name="Super Sizer" />
+	<passive description="Bless in disguise?" gfx="test.png" name="Guppy's Soul" />
+	<passive cache="damage" description="Red Power!" gfx="test.png" name="Holy Heart" />
+	<passive description="Your friends provide!" gfx="test.png" name="BFF2" />
+	<passive cache="shotspeed range" description="Sinusoidal Tears" gfx="test.png" name="Math Lesson #1" />
+	<passive description="High Concentrated Power!" gfx="test.png" name="Power Bombs!" />
+	<passive description="Temporary shielding" gfx="test.png" name="Bless From Above" />
+	<passive cache = "speed" description="I think I ran too much..." gfx="test.png" name="Blisters" />
+	<passive description="Whats that white thing?" gfx="test.png" name="Stafilocus" />
+	<passive description="Please don't touch me..." gfx="test.png" name="SunBurn" />
+	<passive cache = "damage speed" description="Is it, spreading...?" gfx="test.png" name="Herpes" />
+	<passive description="These hazards are killing me!" gfx="test.png" name="Ezcemas" />
+	<passive cache = "damage" description="No Rage!?" gfx="test.png" name="Samson's other Headband" />
+	<passive description="The first shot is what counts!" gfx="test.png" name="First Impression" />
+	<passive description="The upmost gives you a second chance" gfx="test.png" name="Eden's Spirit" />
+	
+	<active description="Devolve your enemies!" gfx="test.png" maxcharges="3" name="Downgrader" cooldown="30"/>
+	<active description="A pound of... Gold?" gfx="test.png" maxcharges="0" name="Golden Potato Peeler" cooldown="15"/>
+	<active cache = "damage flying" description="Heart Mixer" gfx="ChemJar.png" maxcharges="0" name="Chemistry Jar" cooldown="5"/>
+	<active description="Chaotic Rerolling" gfx="test.png" maxcharges="6" name="D26" cooldown="25"/>
+	<active description="Consume wisely..." gfx="test.png" maxcharges="1" name="Mini-Void" cooldown="50"/>
+	<active cache = "luck" description="Temporary luck way up" gfx="test.png" maxcharges="3" name="Stuffed Die" cooldown="25"/>
+	
+	<trinket description="Reveal your hand!" gfx="test2.png" name="Trump Card" />
+	<trinket description="Whats done is done... But, him..." gfx="test2.png" name="Devil's Checklist" />
+</items>

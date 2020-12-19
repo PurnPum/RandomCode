@@ -1,0 +1,42 @@
+<entities anm2root="gfx/" version="5">
+	<entity anm2path="005.012_heart_purple.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Heart (Purple)" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11" subtype="1">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="185" /> <!-- BOSS2_BUBBLES -->
+    </entity>
+	<entity anm2path="005.012_heart_darkred.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Heart (Dark Red)" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11" subtype="2">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="185" /> <!-- BOSS2_BUBBLES -->
+    </entity>
+	<entity anm2path="005.012_heart_darkblue.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Heart (Dark Blue)" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11" subtype="3">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="185" /> <!-- BOSS2_BUBBLES -->
+    </entity>
+	<entity anm2path="005.012_heart_lightsalmon.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Heart (Light Salmon)" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11" subtype="4">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="185" /> <!-- BOSS2_BUBBLES -->
+    </entity>
+	<entity anm2path="005.012_heart_lightblue.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Heart (Light Blue)" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11" subtype="5">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="185" /> <!-- BOSS2_BUBBLES -->
+    </entity>
+	<entity anm2path="005.012_heart_grey.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Heart (Grey)" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11" subtype="6">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="185" /> <!-- BOSS2_BUBBLES -->
+    </entity>
+	<entity anm2path="005.012_heart_orange.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Heart (Orange)" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11" subtype="7">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="185" /> <!-- BOSS2_BUBBLES -->
+    </entity>
+	<entity anm2path="005.012_heart_darkgreen.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Heart (Dark Green)" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11" subtype="8">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="185" /> <!-- BOSS2_BUBBLES -->
+    </entity>
+	<entity anm2path="005.012_heart_darkyellow.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Heart (Dark Yellow)" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11" subtype="9">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="185" /> <!-- BOSS2_BUBBLES -->
+    </entity>
+	<entity anm2path="005.012_heart_lightyellow.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Heart (Light Yellow)" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11" subtype="10">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="185" /> <!-- BOSS2_BUBBLES -->
+    </entity>
+</entities>

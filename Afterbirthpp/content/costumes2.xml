@@ -1,0 +1,5 @@
+<costumes anm2root="gfx/characters/">
+	<costume anm2path="GreyHeartFlight.anm2" type="none" isFlying="true"/>
+	<costume anm2path="costume_eden_clean_body.anm2" type="none" priority="99"/>
+	<costume anm2path="costume_eden_clean_head.anm2" type="none" priority="99"/>
+</costumes>
