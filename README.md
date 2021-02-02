@@ -11,4 +11,4 @@ Ricardo P. P. 's Github
 
 In this repo I'll have all my personal projects mostly coming straight from my eagerness to learn and improve my programming skills.
 
-Contact : ricardoppardo (at) outlook (dor) com
+Contact : ricardoppardo (at) outlook (dot) com
