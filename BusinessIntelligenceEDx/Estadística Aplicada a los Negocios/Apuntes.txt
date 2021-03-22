@@ -1,0 +1,25 @@
+Datos : Informacion sobre algún fenómeno o situación el cual se recolecta para analizar.
+Observaciones : Conjunto de datos sobre un fenómeno particular.
+
+Datos Cualitativos : Algo no numérico, representa cualidades o categorías.
+Datos Cuantitativos : Representan cantidades, normalmente se presentan con dimensionales.
+
+Escalas : 
+	Nominal : Datos que describen características dentro de algún fenómeno.
+		Estadísticas permitidas:
+			Descriptiva : Porcentages , moda
+			Inferencial : Chi, Cuadrada, Prueba binomial
+	Ordinal : Datos con medidas ordenadas y gerarquía
+		Estadísticas permitidas:
+			Descriptiva : Porcentil , mediana
+			Inferencial : Correlación de rangos ordenados, ANOVA de Friedman
+	Intervalo : Un rango de valores donde el 0 es un dato arbitrario.
+		Estadísticas permitidas:
+			Descriptiva : Rango, media, desviación estándar
+			Inferencial : Correlación producto-momento, pruebas t, ANOVA, regresión, análisis factorial
+	De razón : Un rango de valores donde el 0 es fijo.
+		Estadísticas permitidas:
+			Descriptiva : Media geométrica, media armónica
+			Inferencial : Coeficiente de variación
+			
+Distribución frecuencia : Categorizar datos y determinar frecuencias de ocurrencias.
