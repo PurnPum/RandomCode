@@ -1,5 +1,5 @@
-JupyterNotebooks/*
-!JupyterNotebooks/Week1IDSP
-JupyterNotebooks/Week1IDSP/*
-!JupyterNotebooks/Week1IDSP/notebooks
-JupyterNotebooks/Week1IDSP/notebooks/resources/*
+CursosCoursera/*
+!CursosCoursera/IDSP
+CursosCoursera/IDSP/*
+!CursosCoursera/IDSP/notebooks
+CursosCoursera/IDSP/notebooks/resources/*
