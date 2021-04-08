@@ -3,4 +3,7 @@ CursosCoursera/*
 CursosCoursera/IDSP/*
 !CursosCoursera/IDSP/notebooks
 CursosCoursera/IDSP/notebooks/resources/*
+!CursosCoursera/APCDRP
+CursosCoursera/APCDRP/*
+!CursosCoursera/APCDRP/Docs
 FaceItTF2/tf2.html

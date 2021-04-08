@@ -1,0 +1,82 @@
+Heurística : Proceso para guiar en la toma de decisiones, no ha de ser óptimo pero sí práctico.
+Sigues una heurística hasta que tengas una razón para desviarte de ella.
+
+Ratio Data-Ink : Heurística gráfica -> El núcleo inborrable de una gráfica de información no redundante,
+										crucial para poder entender una variable.
+		Definimos el ratio data-ink como la división entre la cantidad de data-ink y la
+		cantidad de tinta necesaria para imprimir la gráfica. Esto básicamente es para eliminar elementos innecesarios de una gráfica.
+		
+Chart-Junk :
+	Arte óptico inintencionado: Como iluminación o patrones
+	La cuadrícula: Causa competencia con los datos actuales, lo mejor es etiquetar directamente.
+	Gráficas creativas de no-dato : Normalmente linealidades o fotos incluídas en el gráfico.
+	
+Estudios muestran como embellecer gráficas puede faciliar recordar la gráfica tras una cantidad de tiempo elevada,
+y al mismo tiempo no cambiar la precisión de la interpretación de las mismas. Sin embargo esta estrategía ha de usarse con
+cuidado ya que podría afectar a la parcialidad del lector frente a los datos.
+
+Edward Tufte es el más conocido promovedor de la eliminación de embellecimientos visuales, indicando que es
+incorrecto distorsionar las medidas de los datos para cumplir un esquema decorativo.
+
+Por otro lado Nigel Holmes indica que los datos gráficos han de enganchar el interés del lector
+y demuestra cómo hacerlo con gráficas ilustradas. Su argumento principal es que la razón
+principal apra realizar una gráfica es para clarificar o hacer visible los hechos que podrían escapar
+al ojo no entrenado enterrados en una masa de material escrito.
+
+La perspectiva minimalista argumenta que los bajos ratios de data-ink y excesivos adornos disminuyen la
+interpretabilidad de los datos. Existen apoyos al argumento de la interpretabilidad cuando esta se define como la precisión y velocidad
+de responder a cuestiones basadas en la gráfica. Un estudio de Schonlau y Peters encontró una correlación
+entre la perdida de precisión y el hecho de añadir la tercera dimensión a una gráfica, mostrando que lleva más tiempo evaluar
+las gráficas 3D o de pastel.
+
+Estudios muestran que en general los usuarios prefieren usar gráficas 3D para mostrárselas a alguien
+y 2D para uso personal inmediato. Y que los diseñadores tienen más tendencia a añadir chart junk cuando
+su objetivo es causar impresión o persuasión.
+
+Blasio y Bisantz argumentan que en tareas de monitorización la interpretabilidad es clave y suprema.
+Reducciones en la misma podrían causar altos incrementos en costes para corporaciones e incrementar el
+esfuerzo mental necesario para hacer tareas comunes.
+
+Spark lines : Gráficas muy simples y pequeñas que se pueden añadir a gráficas o tablas ya existentes.
+No da muchos detalles pero sí nos muestra tendencias de los datos. Estas spark lines se usan principalmente
+en datos donde las tendencias o características distributivas son importantes.
+
+Factor mentira : Es la división del tamaño de un efecto mostrado en la gráfica entre el tamaño del efecto que realmente
+está en los datos. Se usa para tratar de influenciar al lector, o incoscientemente para ayudar con la narrativa.
+
+Arquitectura Matplotlib:
+
+	Capa de fondo : Se encarga de representar los gráficos en la pantalla o en un fichero, en jupyter usamos el inline de fondo.
+	Capa artística : Contiene contenedores como Figura, Subgráfica y eje. También contiene primitivos como
+					Rectánuglo, colecciones y Line2D.
+	Capa de Guión : Simplifica el acceso a las capas anteriores, usaremos PyPlot
+	
+PyPlot es una metodología de visualización de la información procesal, mientras que D3.js, SVG o HTML, son declarativos.
+
+Matplotlib:
+
+	Actualmente soporta gráficos interactivos en la mayoría de sistemas operativos de escritorio 
+	usando los toolkits GTK+, Qt, Tk, FLTK, wxWidgets y Cocoa. También se puede insertar en un headless webserver.
+	
+	Arquitectura matplotlib:
+    El objeto de mayor nivel que controla y maneja a todos los elementos en una gráfica dada se llama Figura.
+    Una de las tareas centrales de la arquitectura que matplotlib debe resolver es implementar un framework para
+    representar y manipular la Figura que esta segregada por renderizar la Figura a un ventana de la interfaz de
+    usuario. Esto permite construir atributos y lógica más sofisticados en dichas Figuras, manteniendo los backends.
+    Esta arquitectura se puede ver en tres capas separadas una encima de otra como una pila.
+    
+    Capa de Fondo (Backend):
+    
+    Al fondo de la pila esta la capa de Fondo (Backend), proporciona una implementación concreta de las siguientes clases abstractas de la interfaz:
+        FigureCanvas : Encapsula el concepto de la superficie donde se dibuja
+        Renderer : Realiza las tareas de dibujar
+        Event : Maneja entradas de usuario como eventos de teclado o ratón
+    Las clases abstractas residen en matplotlib.backed_bases
+    
+    Para un toolkit de interfaces como Qt, FigureCanvas ya tiene una implementación específica que sabe como 
+    insertarse en una ventana nativa de Qt, transferir los comandos del Renderer de matplotlib en la superficie de 
+    dibujo de Qt y traducir los eventos nativos de Qt en el framework Event de matplotlib.
+
+    El trabajo del Renderer es proporcionar una interfaz de dibujo de bajo nivel para dibujar en el lienzo, originalmente la API de Renderer estaaba basada en la interfaz Drawable de GDK, pero hoy en día esta API está mucho más simplificada ya que esto daba problemas para implementar nuevos backends. Matplotlib tiene soporte para
+    un Renderer basado en píxeles usando el modelo de librería en C++ Anti-Gain Geometry (agg)
+
