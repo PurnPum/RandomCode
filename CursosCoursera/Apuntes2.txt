@@ -1,0 +1,21 @@
+Arquitectura matplotlib:
+    El objeto de mayor nivel que controla y maneja a todos los elementos en una gráfica dada se llama Figura.
+    Una de las tareas centrales de la arquitectura que matplotlib debe resolver es implementar un framework para
+    representar y manipular la Figura que esta segregada por renderizar la Figura a un ventana de la interfaz de
+    usuario. Esto permite construir atributos y lógica más sofisticados en dichas Figuras, manteniendo los backends.
+    Esta arquitectura se puede ver en tres capas separadas una encima de otra como una pila.
+    
+    Capa de Fondo (Backend):
+    
+    Al fondo de la pila esta la capa de Fondo (Backend), proporciona una implementación concreta de las siguientes clases abstractas de la interfaz:
+        FigureCanvas : Encapsula el concepto de la superficie donde se dibuja
+        Renderer : Realiza las tareas de dibujar
+        Event : Maneja entradas de usuario como eventos de teclado o ratón
+    Las clases abstractas residen en matplotlib.backed_bases
+    
+    Para un toolkit de interfaces como Qt, FigureCanvas ya tiene una implementación específica que sabe como 
+    insertarse en una ventana nativa de Qt, transferir los comandos del Renderer de matplotlib en la superficie de 
+    dibujo de Qt y traducir los eventos nativos de Qt en el framework Event de matplotlib.
+
+    El trabajo del Renderer es proporcionar una interfaz de dibujo de bajo nivel para dibujar en el lienzo, originalmente la API de Renderer estaaba basada en la interfaz Drawable de GDK, pero hoy en día esta API está mucho más simplificada ya que esto daba problemas para implementar nuevos backends. Matplotlib tiene soporte para
+    un Renderer basado en píxeles usando el modelo de librería en C++ Anti-Gain Geometry (agg)
