@@ -46,7 +46,8 @@ está en los datos. Se usa para tratar de influenciar al lector, o incoscienteme
 
 Arquitectura Matplotlib:
 
-	Capa de fondo : Se encarga de representar los gráficos en la pantalla o en un fichero, en jupyter usamos el inline de fondo.
+	Capa de fondo : Se encarga de representar los gráficos en la pantalla o en un fichero, en jupyter usamos el 
+	inline de fondo.
 	Capa artística : Contiene contenedores como Figura, Subgráfica y eje. También contiene primitivos como
 					Rectánuglo, colecciones y Line2D.
 	Capa de Guión : Simplifica el acceso a las capas anteriores, usaremos PyPlot
@@ -65,9 +66,10 @@ Matplotlib:
     usuario. Esto permite construir atributos y lógica más sofisticados en dichas Figuras, manteniendo los backends.
     Esta arquitectura se puede ver en tres capas separadas una encima de otra como una pila.
     
-    Capa de Fondo (Backend):
+-   Capa de Fondo (Backend):
     
-    Al fondo de la pila esta la capa de Fondo (Backend), proporciona una implementación concreta de las siguientes clases abstractas de la interfaz:
+    Al fondo de la pila esta la capa de Fondo (Backend), proporciona una implementación concreta de las siguientes 
+    clases abstractas de la interfaz:
         FigureCanvas : Encapsula el concepto de la superficie donde se dibuja
         Renderer : Realiza las tareas de dibujar
         Event : Maneja entradas de usuario como eventos de teclado o ratón
@@ -77,6 +79,79 @@ Matplotlib:
     insertarse en una ventana nativa de Qt, transferir los comandos del Renderer de matplotlib en la superficie de 
     dibujo de Qt y traducir los eventos nativos de Qt en el framework Event de matplotlib.
 
-    El trabajo del Renderer es proporcionar una interfaz de dibujo de bajo nivel para dibujar en el lienzo, originalmente la API de Renderer estaaba basada en la interfaz Drawable de GDK, pero hoy en día esta API está mucho más simplificada ya que esto daba problemas para implementar nuevos backends. Matplotlib tiene soporte para
+    El trabajo del Renderer es proporcionar una interfaz de dibujo de bajo nivel para dibujar en el lienzo, 
+    originalmente la API de Renderer estaaba basada en la interfaz Drawable de GDK, pero hoy en día esta API está 
+    mucho más simplificada ya que esto daba problemas para implementar nuevos backends. Matplotlib tiene soporte para
     un Renderer basado en píxeles usando el modelo de librería en C++ Anti-Gain Geometry (agg)
 
+    El framework "Event" de matplotlib asocia eventos de interfaz como pulsaciones de teclado o ratón a las clases de 
+    eventos de matplotlib "KeyEvent" o "MouseEvent".
+    
+    El código de ejemplo "Ejemplo1.py" muestra como (des)activar las líneas en la ventana al pulsar 't'.
+    
+    Esta abstracción permite a los desarrolladores escribir código manejador de eventos de manera que solo haya que 
+    escribirlo una vez y ejecutarlo en todos lados.
+    
+-   Capa Artística (Artist):
+    
+    La capa intermedia en la pila de matplotlib, aquí se realizan la mayoría de tareas arduas. El "Artist" es el 
+    objeto que coge al "Renderer" y dibuja en el "FigureCanvas". Todo lo que ves en una figura de matplotlib es una 
+    instancia de Artist; el título, las lineas, la leyenda, y demás corresponden a instancias individuales de Artist.
+    La clase base es matplotlib.artist.Artist, que contiene atributos que cada Artisst comparte.
+    
+    El metodo "draw" es donde el acoplamiento entre la jerarquía de Artist y el backend se da a cabo. Si creáramos 
+    una subclase de Artist, tendríamos que implementar el método esencial "draw", al cual se le pasa un renderizador
+    del backend. El Artista no sabe en qué tipo de backend va a dibujar el Renderer, pero sabe que la API del 
+    Renderer llamará al método apropiado ("draw_text" o "draw_path"). Ya que el Renderer tiene un puntero a su lienzo
+    y sabe cómo dibujar en él, el método "draw" transforma la representacion abstracta del Artist a colores en un 
+    buffer de píxeles, rutas en un SVG u otra representacion cualquiera.
+    
+    Hay dos tipos de Artist's en la jerarquía. Los artistas primitivos representan los tipos de objetos que verías en
+    una gráfica (Line2D, Rectangle, Circle y Text). Los artistas compuestos son colecciones de otros Artistas como 
+    Axis, Tick, Axes y Figure. Un artista compuesto puede contener a otros artistas compuestos o artistas primitivos.
+    Por ejemplo Figure contiene uno o más Axes compuestos y el fondo es un Rectangle primitivo.
+    
+    El Artist compuesto más importante es Axes, donde están definidos la mayoría de los métodos de trazado de la API 
+    de matplotlib. También contiene múltiples métodos de ayuda para crear artistas primitivos y añadirlos a la 
+    instancia de Axes. Por ejemplo Axes.imshow crea una o más matplotlib.image.AxesImage, que se almacenan en 
+    Axes.images.
+    
+    En el ejemplo "ejemplo2.py" vemos como se define un backend, le conecta una Figura, usa numpy para crear datos y
+    traza un histograma ("matplotlib_histogram.png").
+    
+-   Capa de Guión (Scripting) (pyplot):
+    
+    Con una API bastante cómoda de usar (si bien potencialmente densa sintácticamente), podríamos simplificar el 
+    código anterior al "ejemplo3.py" que resultaría en lo mismo (a diferencia de que ejemplo3 carga el histograma en
+    una ventana en vez de guardarlo en un png como hizo ejemplo2)
+    
+    Veamos varias líneas del ejemplo3:
+        
+        plt.hist : Primer comando de trazado, pyplot mirará sus estructuras internas a ver si existe una 
+            instancia activa de Figure. Si fuera así extraería las Axes y, llamando con la API, dirigiría el trazado 
+            directamente al método Axes.hist, en este caso no hay figura así que crea la Figure y las Axes, las pone 
+            como activas y dirige el trazado a Axes.hist
+        plt.title : Todo igual que antes pero llama a Axes.set_title
+        plt.show : Forzará a la Figure a renderizarse, si el usuario indicó un backend de interfaz por defecto en su 
+            fichero de configuración, iniciará el bucle principal de la interfaz y pondrá cualquier figura creada en
+            la pantalla.
+            
+    En general la interfaz pyplot es una fina capa que rodea a la API de Artist, pretendiendo evitar códigos 
+    duplicados.
+    
+Matplotlib pasa bastante tiempo transformando coordenadas de un systema a otro. Estos sistemas coordinados incluyen:
+
+    data : Información original.
+    axes : El espacio definido por un rectángulo de ejes.
+    figure : Es espacio conteniendo a una figura entera.
+    display : Las coordenadas físicas usadas en la salida (píxeles en PNG, puntos en PostScript, etc)
+    
+Cada artista tiene un nodo de transformación que sabe transformar de un systema coordenado a otro. Estos nodos están
+conectados juntos en una gráfica dirigida, donde cada nodo depende de su padre. La mayoría de estas transformaciones
+son reversibles, lo que hace posible pulsar en un elemento del trazado y devolver sus coordenadas en el espacio data.
+
+Los nodos de transformación pueden ser transformadores afines o no. Los afines son la familia de transformadores que preservan lineas rectas y ratios de distancias, incluyendo rotación, translacion, escala y obliquedad. Las transformaciones afines se representan usando una matríz 3x3.
+
+Las coordenadas bidimensionales se pueden transformar fácilmente multiplicándolas por la matriz. Otra propiedad útil
+es que las transformaciones afines se pueden componer entre sí con multiplicación matricial. Esto reduce 
+computacionalidad y hace que los desplazamientos y enfoques sean más eficientes en la ventana de la interfaz.
