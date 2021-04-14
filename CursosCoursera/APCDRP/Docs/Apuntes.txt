@@ -139,19 +139,72 @@ Matplotlib:
     En general la interfaz pyplot es una fina capa que rodea a la API de Artist, pretendiendo evitar códigos 
     duplicados.
     
-Matplotlib pasa bastante tiempo transformando coordenadas de un systema a otro. Estos sistemas coordinados incluyen:
+    Matplotlib pasa bastante tiempo transformando coordenadas de un systema a otro. Estos sistemas coordinados 
+    incluyen:
 
-    data : Información original.
-    axes : El espacio definido por un rectángulo de ejes.
-    figure : Es espacio conteniendo a una figura entera.
-    display : Las coordenadas físicas usadas en la salida (píxeles en PNG, puntos en PostScript, etc)
+        data : Información original.
+        axes : El espacio definido por un rectángulo de ejes.
+        figure : Es espacio conteniendo a una figura entera.
+        display : Las coordenadas físicas usadas en la salida (píxeles en PNG, puntos en PostScript, etc)
+        
+    Cada artista tiene un nodo de transformación que sabe transformar de un systema coordenado a otro. Estos nodos 
+    están conectados juntos en una gráfica dirigida, donde cada nodo depende de su padre. La mayoría de estas 
+    transformaciones son reversibles, lo que hace posible pulsar en un elemento del trazado y devolver sus 
+    coordenadas en el espacio data.
+
+    Los nodos de transformación pueden ser transformadores afines o no. Los afines son la familia de transformadores 
+    que preservan lineas rectas y ratios de distancias, incluyendo rotación, translacion, escala y obliquedad. Las 
+    transformaciones afines se representan usando una matríz 3x3.
+
+    Las coordenadas bidimensionales se pueden transformar fácilmente multiplicándolas por la matriz. Otra propiedad 
+    útil es que las transformaciones afines se pueden componer entre sí con multiplicación matricial. Esto reduce 
+    computacionalidad y hace que los desplazamientos y enfoques sean más eficientes en la ventana de la interfaz.
+
+    Las transformaciones no afines se definen usando funciones de Python, asegurando su arbitrariedad. Matplotlib usa 
+    estas transformaciones internamente para escalas logarítmicas, trazados polares y proyecciones geográficas, las 
+    cuales se pueden mezclar con las afines. Matplotlib automaticamente simplificará la parte afina y solo volverá a 
+    las funciones arbitrarias para las porciones no afinas.
+
+    El canal polilineal:
+
+        Al trazar las lineas, hay varios pasos que se realizan para pasar de los datos a la línea en la pantalla. 
+        Todos estos pasos están refactorizados como pasos discretos, lo que permite que cada backend escoja qué pasos 
+        quiere realizar, ya que algunos solo son útiles en ciertos contextos.
+        
+    -   Transformación: Las coordenadas se transforman de coordenadas de datos a coordenadas de figura. Si esta es
+            puramente una transformación afina, será simplemente una multiplicación matricial. Si esto involucra
+            transformaciones arbitrarias entonces se llamará a las fuciones de transformación.
+            
+    -   Manejar datos ausentes: La colección de datos podría tener trozos en los que falten datos o sean inválidos.
+            Esto se puede indicar por el usuario con valores NaN o usando colecciones enmascadas de numpy. Debido a
+            que los formatos de salida vectorial, como pdf, y librerías de trazado, como Agg, normalmente no manejan
+            el concepto de información ausente a la hora de trazar una polilínea, este paso del canal polilineal debe
+            saltar por encima de esos datos ausentes usando comandos MOVETO, que indican al trazador que retome el 
+            dibujo en otro punto distinto.
+                
+    -   Recortar: Puntos fuera de los límites de la figura puede aumentan el tamaño de fichero con puntos invisibles.
+            A mayores, valores de coordenadas muy altos o bajos pueden causar errores de desbordamiento, resultando 
+            en saldidas distorsionadas. Este paso recorta la polilínea a medida que entra y sale de los límites de la
+            figura preveniendo estos problemas.
+                
+    -   Quebrar: Líneas perfectamente verticales u horizontales pueden parecer difusas debido al antialiasing cuando
+            sus centros no están alineados con el centro del pixel. Primero se determina si la polilínea está formada
+            enteramente por segmentos verticales y horizontales, y si es así redondea cada vértice al centro de píxel 
+            más cercano. Este paso solo es usado por backends que generan imágenes pixeladas, ya que los backends
+            vectoriales deben tener puntos exactos.
+                
+    -   Simplificación: Al trazar gráficos muy densos, muchos de los puntos podrían no ser visibles. Incluir estos 
+            puntos aumentaríaa el tamaño del fichero y podría alcanzar el límite de puntos que se pueden tener en el formato de fichero. Entonces cualquier punto que esté en una línea que ya unía a dos puntos vecinos será borrado. ( ()----(X)-----() )
+                
+    Texto Matemático:
     
-Cada artista tiene un nodo de transformación que sabe transformar de un systema coordenado a otro. Estos nodos están
-conectados juntos en una gráfica dirigida, donde cada nodo depende de su padre. La mayoría de estas transformaciones
-son reversibles, lo que hace posible pulsar en un elemento del trazado y devolver sus coordenadas en el espacio data.
-
-Los nodos de transformación pueden ser transformadores afines o no. Los afines son la familia de transformadores que preservan lineas rectas y ratios de distancias, incluyendo rotación, translacion, escala y obliquedad. Las transformaciones afines se representan usando una matríz 3x3.
-
-Las coordenadas bidimensionales se pueden transformar fácilmente multiplicándolas por la matriz. Otra propiedad útil
-es que las transformaciones afines se pueden componer entre sí con multiplicación matricial. Esto reduce 
-computacionalidad y hace que los desplazamientos y enfoques sean más eficientes en la ventana de la interfaz.
+        Sistema de escritura TeX, permite insertar expresiones matemáticas en texto plano en la gráfica directamente.
+            \sqrt{\frac{\delta x}{\delta y}}
+            
+        Para usar esto matplotlib proporciona dos maneras: O bien usando "usetex" que usará el motor de trazado Text
+        localizado en la máquina del usuario, o usar "mathtext", que hará que matplotlib use su propio motor de renderizado, el cual utiliza el framework de parseo pyparsing.
+        
+    Pruebas de regresión:
+        
+        principalmente usadas para comparar cambios entre versiones, con distintos backends o cualquier cambio para    
+        poder comprobar las diferencias entre dos gráficas iguales a la hora de renderizarlas.
