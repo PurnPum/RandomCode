@@ -1,0 +1,85 @@
+Red Larry Jr.:
+
+	No muere si queda 1 trozo solo, y si queda 1 trozo solo este pierde velocidad pero echará creep.
+	
+Green Pin:
+	
+	25% más de vida
+	En vez de cargar contra el jugador, carga a la zona más alejada de él. 
+	Una vez allí dispara IPECAC shots con bastante rango hasta que el jugador se acerque lo suficiente, después vuelve a cargar al otro lado de la habitación.
+	Sus animaciones son más rápidas.
+	No dispara las tears al cargar.
+	
+Red Fistula:
+
+	En vez de separarse en 1 -> 4 -> 8 , se separa en 1 -> 3 -> 9. 
+	Se mueve un poco más rápido y no dropea gusanos.
+	
+Blue The Gate:
+	
+	En vez de spawnear leapers spawnea Hosts con bastante frecuencia. Solo usa brimstone.
+	
+Orange Loki:
+
+	No spawnea nada, los disparos que hace son más rápidos y son homing.
+	
+Super Champions:
+	
+	Super Monstro:
+	
+		Tiene un 50% más de vida, nunca hace el salto corto, y el largo lo usa con poca frecuencia.
+		
+		Sus ataques de proyectiles consisten en :
+		
+			Dos Brimstones Horizontales que siempre giran 45º léntamente, uno hacia abajo y el otro hacia arriba.
+			3 Disparos consecutivos propios del monstro normal, poco tiempo ente los ataques.
+			3 Disparos de Ipecac consecutivos que dejan Creep que ralentiza.
+			
+	Super Dingle:
+	
+		Solo usa el ataque de lanzarse contra Isaac, pero lo hace con bastante rapidez,
+		y realiza 6 cargas antes de cansarse. Al final de la última carga echa una caca roja, a la que él es inmune.
+		
+	Super The Haunt:
+	
+		Empieza con 6 Lil' Haunts, estos atacan en el siguiente orden. 1 -> 2 -> 2 -> 1
+		
+		En la segunda fase, instantáneamente usa el Brimstone de su versión rosa, que es diagonal y rebota en la pared 1 vez.
+		
+		Este ataque nunca para, y mientras tanto, Haunt usará su ataque normal de 5 tears al frente, solo que estas se moverán bastante más lentamente.
+		
+	Super Widow:
+	
+		25% más de vida.
+		
+		Sus saltos alcanzan mayores longitudes
+		
+		En vez de tratar de atacar a Isaac, Widow huirá de él, saltando lejos de su alcance.
+		
+		Su único ataque será spawnear muchos tipos de arañas, incluyendo Lvl2 Spiders, Trites, Raglings y Small Crazy Long Legs.
+		
+		Solo puede tener 4 bichos distintos al mismo tiempo.
+		
+	Super Little Horn:
+	
+		33% más de vida.
+		
+		En vez de spawnear 1 bola de humo, spawnea 3, pero estas rebotan en vez de ir a por isaac.
+		
+		En vez de spawnear troll bombs o Super Troll Bombs, spawnea Dank Death's Head, con 12 de vida en vez de 20.
+		
+		No spawnea Pits.
+		
+	Super Dark One:
+	
+		(Habría que pedir ayuda a un spriter para la animación de carga vertical)
+		
+		En vez de disparar tears carga tanto vertical como horizontalmente.
+		
+		Su velocidad es mucho mayor, pero la animación que hace antes de cargar lleva más tiempo.
+		
+		
+		
+		
+		
+		

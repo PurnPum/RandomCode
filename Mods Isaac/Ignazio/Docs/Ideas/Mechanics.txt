@@ -1,0 +1,141 @@
+Angel / Devil Rooms:
+
+	Hacer que en el primer deal que recibas, aparezcan ambas puertas (diablo y angel).
+	Igual que con duality, si entras en una la otra se va. Pero si entras en la del diablo,
+	tus chances pasan a ser 75-25 de devil/angel , y si entras en la del ángel, tus chances pasan a ser
+	25-75 de devil/angel. Si no entras en ninguna, seguirán apareciendo ambas hasta que escojas.
+	Si te teleportas con Joker / Red Chest, te teleportarás a una habitación con ambas puertas,
+	como si fuera la del boss, la elección en ese caso es obligada. Tras salir de uno de los deals,
+	volverías a donde estabas.
+	
+	Buffear los angel rooms añadiendo más posibilidades de items, junto con nuevos items. También
+	se podrían añadir drops especiales a los angel rooms, como runes, trinkets, etc.
+	
+	Añadir a los devil deals unos deals especiales a mayores de los items normales. Estos deals consistirían
+	en unos spikes que siempre quitan vida roja. Habría 5 tipos distintos de spikes, cada tipo te
+	daría un consumable distinto por golpe. El diseño de cada spike reflejará que consumable dan
+	(Se usará como unas spikes con la forma del consumable).
+	Habrá de llaves(2),bombas(2),dinero(3),cartas(1),pastillas(1).
+	Cada payout puede ser cualquier tipo (en llave puede ser normal, 1+1 o Golden; en cartas pueden ser normales, rojas o runes)
+	Solo funciona si le das vida roja, si solo tienes 1 corazón rojo entonces no te dará nada, pero sí te puede matar si no tienes corazones azules.
+	No reducirá devil deal chance, y no contará como damage penalty en la puntuación.
+	Como máximo cada uno funcionará 7 veces.
+	Estas spikes se generarían aleatoriamente en devil deals y curse rooms, pero siempre mínimo 2 y máximo 4.
+	
+	En los angel deals se pondrá un pedestal que te permitirá poner tu active item encima. Si lo haces, este desaparecerá. Y a cambio te darán
+	2 items del angel pool cualquiera y 2 soul hearts. Funciona 1 vez. Seguirá habiendo items como siempre.
+	
+Unfair Rooms:
+
+	Modificar todas las habitaciones posibles para eliminar todos el posible unfair damage.
+	
+Red/Purple Fire:
+
+	Hacer que haya algún tipo de animación antes de que un fuego rojo/púrpura dispare.
+	
+Pastillas nuevas:
+
+	Añadir un nuevo tipo de pastillas con un diseño distinto. Estas pastillas tendrán un efecto de stat up / down para la habitación en la que se usen.
+	
+	Habrá en total 14 pastillas. 2 Para cada stat : Speed , Tears , HP , Damage , Range , Shot Speed y Luck. 1 será que lo sube y la otra que lo baja.
+	
+	HP : +2 / -1 . Si tienes 1 ó 0 de vida roja, hace +2 sin importar cual sea.
+	
+	Speed : +0.6 / -0.4
+	
+	Tears : -4 / +2 . Afecta al tear cap como si fuera el trinket cancer.
+	
+	Damage : +3 / -2
+	
+	Range : +10 / -5
+	
+	Shot speed : +0.8 / -0.4
+	
+	Luck : +8 / -4
+	
+	Funcionan con placebo y Liberty Cap.
+	
+	Al igual que las pills normales, todas son ??? con colores al azar hasta que la usas una vez. A menos que tengas PHD, en ese caso todas son buenas.
+	
+	También funcionan con Baggy of pills y con Acid baby.
+	
+Pastillas antiguas:
+
+	Hacer que Amnesia te borre el mapa, pero en vez de no poder volver a verlo, empiezas a volver a dibujarlo como si hubieras empezado el piso en esa habitación.
+	
+	Eliminar Retro vision
+	
+Curses/Blessings:
+
+	Eliminar todas las curses existentes (excepto labyrinth) ya que solo molestan, en su lugar poner curses que, añadan dificultad, pero de forma que sea interesante, con risk/reward.
+	Por eso dejo Labyrinth, ya que añade dificultad, con un downside (1 shop y 1 deal menos) y un upside (mayor rapidez para hacer floors).
+	
+	Las blessings solo estarán disponibles tras coger un item del angel pool.
+	
+	Ideas:
+	
+	Curse of Championship:
+		Todos los enemigos spawnearán como champion, si pueden. (Incluídos bosses)
+		Solo aparecerán champions que normalmente dropean algo, y el drop estará garantizado.
+		Da el efecto de Lusty Blood en el nivel. No da nada extra si ya se tiene.
+		
+	Curse of the Keeper:
+		Al principio del nivel cura al jugador hasta 2 corazones rojos, y le da dos azules.
+		Todos los corazones que normalmente dropearian pasan a ser moscas, como le pasaría al Keeper.
+		
+	Curse of Value:
+		Todos los items que se cojan durante ese nivel tendrán sus subidas de stats multiplicadas por 1.25, pero su bajadas multiplicadas por 1.75.
+		Por ejemplo Polyphemus dará un 25% más de daño de lo normal, pero el tears down será un 75% peor.
+		Solo afecta a items que directamente modifiquen stats. Los items afectados no pierden el efecto en todo el run, a menos que se use Dagaz/Black Candle
+		en el mismo nivel donde la curse sucedió.
+		
+	Curse of Chaos:
+		Da el efecto de tener el item Chaos en ese nivel. No puede suceder si ya se tiene Chaos.
+	
+	Blessing of Choice:
+		Da el efecto de los siguientes items para ese nivel: There's Options, More Options, Duality.
+		
+	...
+	
+	
+Máquinas:
+
+	Agregar una máquina de reroll que tenga el efecto del D20
+	
+Habitaciones pequeñas:
+
+	Editar las de los bosses para que haya un pequeño camino a los lados para que se genere el devil deal,
+	este camino está bloqueado por algún tipo nuevo de obstáculo que solo desaparece al finalizar la habitación.
+	
+Super Champions:
+
+	Serían Champions de bosses bastante más poderosos de lo normal, solo aparecen en la sala de boss,
+	si estamos en la versión más dificil de la sala (Flooded Caves, Dank Depths, etc), y aparecen en el capítulo siguiente.
+	Por ejemplo Super Monstro solo aparece en Flooded Caves. Son bastante raros, con un 20% chance de sustituir al boss que tocaría.
+	La exceptión a la regla anterior es Daddy Long Legs, que aparece en Scarred Womb.
+	
+	Estos bosses siempre dropean un item específico (a menos que ya se tenga)
+		
+	Lo que hacen estos bosses está especificado en el documento de champions.
+	
+	Los items serían :
+	
+		Monstro : Monstro's Lung
+		Dingle : E'Coli
+		The Haunt : Lil' Haunt x3
+		Widow : Infestation 2
+		Little Horn : Little Horn
+		
+		Dark One : Succubus
+		The Husk : The Mulligan
+		The Forsaken : Compound Fracture
+		
+		Loki : The Mark
+		Mask of Infamy : Infamy
+		Sister Vis : Gimpy
+		The Adversary : Lil' Brimstone
+		Daddy Long Legs : Daddy Longlegs
+		
+Krampus:
+
+	Su brimtone no spinea, aunque sígue pudiendo ser diagonal o cardinal. Se reduce el delay entre la animación y el brimstone.

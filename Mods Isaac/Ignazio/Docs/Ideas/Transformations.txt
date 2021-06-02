@@ -1,0 +1,7 @@
+Skin Cancer:
+
+	Garantiza inmunidad al daño por contacto, creep, spikes (excepto sac room) y Curse room.
+	El fuego sigue haciéndote daño.
+	
+	Requiere 3/5 items del set de enfermedades dermatologicas, todos esos items son 100% desventajosos,
+	en eso se basa el balance de la transformación.

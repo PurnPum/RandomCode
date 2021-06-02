@@ -1,0 +1,43 @@
+Personaje 1 (sin nombre aún):
+
+	La idea de este personaje es que tenga vida numérica, en vez de tener corazones, tendrá una barra de vida numérica para la vida roja,
+	otra para la azul, otra para la negra y otra para la de hueso. El daño recibido se aplicará a la barra de vida activa, la cual se cambia con Control.
+	Una barra activa debe tener algo de vida o no se permitirá.
+	
+	La barra de vida de hueso se
+	
+	Su vida máxima será 150, 30 más de lo normal.
+	
+	Stats iniciales:
+		Igual que los de Isaac, pero empieza con 30 de vida roja , y 10 de vida azul (como si empezara con 2 corazones rojos y medio, + medio azul)
+	
+	Vida recibida por elementos del juego que no sigue la regla general de 1 heart = 10 HP:
+	
+		Eternal heart completo : + 15 HP (Red)
+		HP Up (item) : + 15 HP (Red)
+		Rotten Heart : + 1 HP (R) [La vida rotten se suma a la roja pero son distintas]
+	
+	Cada enemigo/boss hará una cantidad de daño distinta, incluyendo distintos ataques (ver Excel para la lista). La duración de los IFrames dependerá del daño recibido.
+	
+	Los items del devil deal tendrán costes distintos según el item correspondiente, y se necesita la cantidad pedida siempre (ver Excel para la lista).
+	Los precios variarán según la barra de vida activa.
+	
+	Ciertos items tendrán que ser cambiados para que funcionen bien con el personaje. (Ver Excel para la lista)
+	
+	Un corazón dorado hará el efecto de redondear con color amarillo a la barra activa (de forma que solo se pueden tener como máximo 4 corazones dorados). Al recibir
+	cualquier daño en esa barra se aplicará el efecto del corazón dorado y se perderá.
+	
+	Los corazones eternos se pondrán a la derecha del todo de la barra de vida roja. Si no hay vida roja esto hará que se pueda poner la barra roja como activa.
+	
+	A la hora de separar entre vida azul y negra, no se separan. Si tienes 4 de vida azul y coges un corazón negro, te sumará 10 de vida negra justo después de esa azul que tenías.
+	
+	Un corazón negro no hará efecto hasta que se vacíe por completo. Habrá un contador no visible de vida negra perdida, cuando este contador aumente en 10, aplicar el efecto del corazón negro.
+	Es posible activar más de 1 corazón negro a la vez si el ataque recibido hace la cantidad necesaria.
+
+	Las bombas, al igual que los ataques explosivos de los enemigos, harán 13 de daño. Las spikes harán 10. Los pitfalls hacen 7, los pedos de los mushrooms harán 8. Los disparos/creep de los polyps harán 5.
+	Los fuegos harán 7 en contacto, las tears de los fuegos rojos y púrpuras harán 5 y 10, respectivamente. El TNT hará 15 de daño. La caca roja hará 6 de daño. Las rocas con bomba harán 13 de daño.
+	
+	Todo el daño se multiplica por 1.5 a partir del Womb. Redondeando hacia arriba. Por ejemplo un Vis en el Womb con su brimstone hará 18 de daño
+	Este multiplicador no stackea con el 1.5 de los Champions.
+	
+	Empieza con su jarra, pero la ha de desbloquear primero venciendo a Mom's Heart

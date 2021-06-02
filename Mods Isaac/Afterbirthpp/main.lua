@@ -3393,7 +3393,7 @@ end
 
 -----------------------------------------------------------
 
--- Checklist --
+-- Checklist (trinket) --
 
 -- TODO :	Problemas con Lamb (spawnear la cabeza spawnea al lamb entero),
 --			Fallen (los minifallen respawnean como normal fallen),

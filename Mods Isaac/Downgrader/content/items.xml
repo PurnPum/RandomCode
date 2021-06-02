@@ -1,0 +1,3 @@
+<items gfxroot="gfx/items/" version="1">
+	<active description="Devolve your enemies!" gfx="test.png" maxcharges="3" name="Downgrader" cooldown="30"/>
+</items>

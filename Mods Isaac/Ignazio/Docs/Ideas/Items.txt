@@ -1,0 +1,796 @@
+Fake 4-head Clover: //Ya codificado
+
+	All stats down, Luck way up.
+
+	Tears + 0.2
+	Speed - 0.15
+	Range - 3
+	Damage - 0.4
+	Shot Speed - 0.2
+	(Luck + 2) * 1.75
+	
+	Boss Room
+
+Guppy's Soul: //Ya codificado
+
+	Bless in disguise?
+
+	Pasivo, hace que todos los corazones que se encuentren en el suelo se transformen en medio corazón azul, esto incluye los rojos, azules, negros, dorados, etc.
+	
+	Angel Room.
+	
+	Cuenta para la transformación Guppy.
+	
+Super Sizer: //Ya codificado 
+
+	Your surroundings feel larger.
+	
+	Pasivo, fuerza que Curse of the labyrinth suceda en todas las siguientes posibles niveles. Si se usa en el primer nivel
+	de un capítulo, no tendrá efecto hasta el siguiente capítulo.
+	
+	Shop Room.
+	
+Holy Heart: //Ya codificado
+
+	Red Power!
+
+	Pasivo:
+		Con casi todos los personajes:
+			+0.5 daño por cada corazón rojo lleno.
+			-0.15 daño por cada corazón azul.
+			-0.4 daño por cada corazón negro.
+		
+		Con Blue Baby:
+			+0.25 daño por cada corazón azul.
+			-0.4 daño por cada corazón negro.			
+		
+		Con The Lost:	
+			+2 daño si holy mantle está activo
+			-1 daño si holy mantle no está activo
+	
+		Con mi nuevo personaje:
+			+0.04 daño por cada punto de vida roja lleno.
+			-0.015 daño por cada punto de vida azul.
+			-0.03 daño por cada punto de vida negra.
+			
+	+20% chance de transformar un heart cualquiera en un Eternal Heart. (Falta codificar esto)
+			
+	Angel Room
+
+BFF 2: //Ya codificado
+
+	Your friends provide!
+
+	Pasivo
+
+	Dobla los payouts de todos los familiars que dan cosas.
+	
+	Sack of X : Da el doble de X (pennies, bombs, etc)
+	
+	The Relic : Da 2 soul hearts
+	
+	Little Chad : Da 2 mitades de corazón.
+	
+	Bums : Al momento de pagar, lo harán dos veces.
+	
+	Sissy Long Legs / Rotten Baby : Dan 2 flies/spiders cuando normalmente darían 1
+	
+	Mystery Sack / Lil' Chest : Spawneará el doble del payout.
+	
+	Sworn Protector : Spawnea dos Eternal Hearts.
+	
+	Rune Bag : Spawneará dos runes en vez de 1.
+	
+	Battery baby : Da 2 Baterias y 2 cargas.
+	
+	Acid Baby : Dará dos pills
+	
+	Bumbo : Doble payout
+	
+	Leech : Cura 1 corazón de vida en vez de medio
+	
+	Shop
+	
+Math Lesson #1 //Ya codificado
+
+	Sinusoidal damage!
+	
+	Pasivo
+	
+	Las lágrimas constantemente aumentan y disminuyen de daño y tamaño, entre *2 y *1/2.
+	-0.4 de Shot Speed +4 TearFallingSpeed
+	
+	Item room, Secret room
+	
+Power Bombs: //Ya codificado
+
+	High Concentrated power.
+
+	Pasivo
+
+	Las bombas hacen 3 veces más daño (de 60 a 180)
+	
+	El radio de explosión de tus bombas disminuye considerablemente (el ratio de explosión se divide a la mitad)
+	
+	Si se tiene junto a Mr.Mega, las bombas harán 110 * 3 = 330 de daño, y el ratio de explosión será el de las bombas normales.
+	
+	Bomb Beggar, Item Room
+	
+Downgrader : //Ya Codificado
+
+	Devolve your enemies!
+	
+	Activo (3 cargas)
+	
+	Igual que el anterior, pero solo funciona con enemigos normales, también elimina cualquier champion.
+	
+	Lista:
+		
+		Attack Fly -> Black Fly
+		
+		Ring Fly    }
+		Dark Fly    }
+		Swarm Fly   } -> Attack Fly 
+		Hush Fly    }
+		Motter	    }
+		Level 2 Fly }
+		
+		Super Pooter -> Pooter
+		
+		Red Boom Fly 	 } -> Boom Fly
+		Drowned Boom Fly }
+		
+		Full Fly -> Level 2 Fly
+		
+		Spit -> Sucker
+		
+		Corn Dip } -> Dip
+		Squirt   }
+		
+		Dank Squirt } -> Squirt
+		Dinga 		}
+		
+		Big Spider	   } -> Spider
+		Trite		   }
+		Level 2 Spider }
+		
+		Ragling	} -> Trite
+		Blister	}
+		
+		Ticking Spider -> Level 2 Spider
+		
+		Baby Long Legs -> Small Baby Long Legs
+		
+		Crazy Long Legs -> Small Crazy Long Legs
+		
+		Blind Creep } -> Wall Creep
+		The Thing 	}
+		
+		Rage Creep -> Blind Creep
+		
+		Sack 		} -> Boil
+		Gut  		}
+		Blue Boil   }
+		
+		Walking Gut  } -> Walking Boil
+		Walking Sack }
+		
+		NightCrawler } -> Round Worm
+		Roundy		 }
+		Para-Bite	 }
+		
+		Mulliboom -> Mulligoon
+		
+		Hive -> Mulligan
+		
+		Drowned Hive } -> Hive
+		Swarmer 	 }
+		
+		Flaming Hopper } -> Hopper
+		Leaper		   }
+		
+		Gusher -> Pacer
+		
+		Black Globin's Body } -> Gusher
+		Splasher			}
+		
+		Frowning Gaper	} -> Gaper
+		Cyclopia 		}
+		Blue Gaper		}
+		Greed Gaper		}
+		
+		Gurgle	} -> Frowning Gaper
+		Null	}
+		
+		Rotty -> Skinny
+		
+		Mr.Maw 		} -> Maw
+		Psychic Maw }
+		
+		Psychic Horf 	} -> Horf
+		Maw 			}
+		Red Maw			}
+		
+		Black Bony -> Bony
+		
+		Flesh Death's Head -> Death's Head
+		
+		Fat Bat -> One Tooth
+		
+		Wizoob -> Lil' Haunt
+		
+		Red Ghost -> Wizoob
+		
+		Conjoined Fatty } -> Fatty
+		Pale Fatty		}
+		
+		Blubber -> Half Sack
+		
+		Blue Conjoined Fatty -> Conjoined Fatty
+		
+		Fat Sack -> Pale Fatty
+		
+		Gazing Globin	} -> Globin
+		Dank Globin		}
+		Black Globin	}
+		
+		Selfless Knight	}
+		Floating Knight	} -> Knight
+		Bone Knight		}
+		
+		I. Blob 	} -> Clotty
+		Mega Clotty	}
+		
+		Mom's Dead Hand -> Mom's Hand
+		
+		Charger } -> Maggot
+		Spitty 	}
+		
+		Drowned Charger -> Charger
+		
+		Conjoined Spitty -> Spitty
+		
+		Camillo Jr. -> Psy Tumor
+		
+		Psy Tumor -> Tumor
+		
+		MemBrain -> Brain
+		
+		Mama Guts 		} -> Guts
+		Scarred Guts 	}
+		
+		Scarred Para-Bite 	} -> Para-Bite
+		Cod Worm 			}
+		
+		Kamikaze Leech 	} -> Leech
+		Holy Leech		}
+		
+		Host -> Red Host
+		Mobile Host -> Flesh Mobile Host
+		Flesh Mobile Host -> Red Host
+		
+		Nerve Ending 2 -> Nerve Ending
+		
+		Vis -> Chubber
+		Double vis -> Vis
+		Scarred Double Vis -> Double Vis
+		
+		Bloodshot Eye -> Eye
+		
+		Evil Twin -> Dople
+		
+		Angelic Baby -> Baby
+		
+		Begotten -> Homunculus
+		
+		Hanger -> Keeper
+		
+		Vomit Grimace -> Stone Grimace
+		
+		Brimstone Grimace -> Turret Grimace
+		
+		Gaping Maw -> Broken Gaping Maw
+		
+		Stone Eye -> Turret Grimace
+		
+		Black Maw -> Oob
+		
+		Blastocyst (Small) -> Embryo
+		
+		Blastocyst (Medium) -> Blastocyst (Small)
+		
+		Fistula (Small) -> Charger
+		
+		Fistula (Medium) -> Fistula (Small)
+		
+		Teratoma (Small) -> Spider
+		
+		Teratoma (Medium) -> Teratoma (Small)
+		
+		Red Fire Place -> Fire Place
+		Purple Fire Place -> Blue Fire Place
+		
+		Item Room
+		
+Golden Potato Peeler: //Ya codificado
+
+	A pound of... Gold?
+
+	Activo (Cargas infinitas)
+
+	Elimina un corazón rojo como el potato peeler.
+	
+	Dropea una golden Key, una golden bomb y un dime.
+	
+	+0.5 luck por uso
+	
+	Shop room
+	
+Bless from above: //Ya Codificado
+
+	Temporary protection
+
+	Pasivo
+
+	Cada vez que Isaac entra en una habitación con enemigos, tendrá 3 segundos de Invulnerability frames.
+	
+	Angel Room
+	
+Set Enfermedades dermatologicas (todos pasivos): //Ya codificados
+	
+	Herpes:
+	
+		Is it, spreading...?
+		
+		Por cada nueva habitación visitada : +0.06666 dmg , -0.03333 speed
+		
+		Se resetea al comenzar nuevo nivel
+		
+	Sunburn: // Ya codificado
+	
+		Please dont touch me...
+		
+		Cada vez que Isaac es golpeado por contacto
+		da el efecto de Sad Onion, pero doble daño recibido.
+	
+		Con mi personaje, multiplica el daño recibido por 1.5, stackea con champion/womb+
+	
+	Ezcemas: //Ya codificado
+	
+		These hazards are killing me!
+		
+		El daño por spikes, Red Poop, Cursed Rooms y Creep será el doble 
+		(si un ataque te quitaba 1 corazón, ahora te quitará 2)
+		
+		Con mi personaje, multiplica el daño recibido por 1.5, stackea con champion/womb+
+	
+	Blisters: // Ya codificado
+		
+		I think I ran too much.
+		
+		(Speed + 0.2) * 0.6
+		
+		Tener Flight o Callus quita el speed down
+	
+	Stafilocus (proveniente de staphylococcus): //Ya codificado (Falta arreglar el glitch del color)
+	
+		Whats that white thing?
+		
+		Cada vez que isaac recibe un golpe, creep blanco aparecerá donde está Isaac
+		Este creep ralentizará a Isaac.
+		Un Sack enemigo spawneará al lado de Isaac.
+
+	Devil deal / Curse Room
+		
+Samson's other headband: // Ya codificado
+
+	No Rage!?
+
+	Pasivo
+
+	+ 0.25 dmg por cada habitación completada que tuviera enemigos sin recibir daño hasta un máximo de +6 de daño tras 24 habitaciones
+	
+	Con the Lost igual, pero detectando si te golpean y pierdes holy mantle.
+	
+First Impression: //Ya codificado (Solo falta que Epic fetus haga el daño extra)
+	
+	The first shot is what counts!
+	
+	Pasivo
+	
+	La primera lágrima disparada en una habitación hará 4x daño, tendrá un color rojo oscuro, tras dispararla Isaac no podrá disparar durante 1.5 seg.
+	Creará un creep rojo que boosteará el daño de Isaac con un multiplicador de 1.5. (No hará nada si fligth)
+	
+	Synergy con Dr Fetus, Epic Fetus -> La primera bomba tiene 4x daño y crea el creep.
+	
+	Synergy con Tech , Tech X , Brimstone -> El primer láser tiene 4x de daño, no hay creep.
+	
+	Synergy con Ludo -> La tear se vuelve roja, tendrá 4x daño y causará el creep cuando toque a algun enemigo,
+	tras eso desaparecerá y poco despuñes reaparecerá al lado del jugador.
+	
+	Synergy con Ludo + Tech -> El laser durante medio segundo tendrá 4x daño y tendrá color más oscuro, pero no se podrá mover.
+	Tras este medio segundo el laser volverá al color y daño normal, pero mantendrá la anchura extra y se podrá mover.
+	
+	Synergy con Ludo + Brim -> El laser durante 3 segundos y medio tendrá 4x daño y tendrá color más oscuro, pero no se podrá mover.
+	Tras este medio segundo el laser volverá al color y daño normal, pero mantendrá la anchura extra y se podrá mover.
+	
+	Synergy con Tech 2 -> El laser mantendrá el x4 daño mientras no se suelte o te golpeen.
+	
+	Item pool
+	
+
+Chemistry Jar: // Ya codificado
+
+	Heart Mixer
+	
+	Activo (Cargas infinitas)
+	
+	Permite mezclar corazones (el nuevo personaje empezará con este item)
+	
+	Solo puedes tener dos corazones en la jarra al mismo tiempo, y no se pueden coger de los nuevos corazones.
+	
+	El jugador solo puede tener 2 corazones especiales distintos al mismo tiempo. 
+	Si el jugador ya tiene la vida máxima, se sobreescribirá el último corazón (a menos que el jugador tenga 12 corazones rojos)
+	En el caso de mi personaje, este tendrá una barra especial de 20 para estos corazones especiales.
+	Estos corazones siempre tomarán prioridad de recibir daño frente a otros (excepto con cosas como IV bag)
+	
+	Al intentar usar el Activo:
+	
+		Si tienes menos de 2 corazones :
+			Si la tapa está abierta :
+				Cierra la tapa y no se pueden coger más hasta que se abra.
+			Si la tapa está cerrada :
+				Abre la tapa y suelta los corazones almacenados
+		
+		Si tienes 2 corazones (el estado de la tapa da igual):
+			Si los dos corazones son iguales :
+				Dropea ambos
+			Si los dos corazones son distintos :
+				Listado de combinaciones
+		
+		Si la Tapa está cerrada, cogeremos corazones como los cogeríamos normalmente
+		
+		Si la Tapa está abierta, se meterán en la jarra si hay menos de 2
+				
+	Listado Combinaciones:
+		Rojo + Azul = Morado 				FF00FF
+		Rojo + Negro = Rojo Oscuro 			7F0000
+		Rojo + Blanco = Color Salmón		FFA07A
+		Rojo + Dorado = Naranja				FF7F00
+		
+		Azul + Negro = Azul Oscuro			00007F
+		Azul + Blanco = Azul Claro			7F7FFF
+		Azul + Dorado = Verde Oscuro		006400
+
+		Negro + Blanco = Gris				7F7F7F
+		Negro + Dorado = Amarillo Oscuro	7F7F00
+		
+		Blanco + Dorado = Amarillo Claro	FFFF7F
+		
+	Listado efectos:
+		Están ordenados por rareza.
+		
+		Morado 			: 	Da +0.25 de daño por cada corazón rojo lleno. Stackea
+		Rojo Oscuro 	:	Cuando se pierde este corazón por daño, da al jugador +6 de daño en esa habitación.
+							Este daño se va reduciendo en intervalos de -1.5 hasta volver al valor original
+							(Dura 4 habitaciones : +6 | +4.5 | +3 | +1.5 | +0). No stackea con si mismo pero resetea a +6
+		Azul Oscuro 	:	Efecto Infestation 2 pero con Flies. Cuando se pierde spawnea 10 flies extra.
+							Stackea, si tienes 2 spawnea 2 flies.
+		Color Salmón 	:	Los HP Ups dan 1 corazón extra. Rotten meat daría 2 HP, the Body daría 4. Un eternal heart daría 2 HP. Stackea
+		Azul Claro 		:	Corazón resistente : En vez de destruírse de un golpe, se destruye en 3.
+							Coger otro repara 1 si está dañado sin dar otro corazón.
+		Gris 			:	Duality + Flight (1 Ala demoníaca + 1 Ala angelical). Al perder el corazón efecto de Joker Card.
+		Naranja 		:	Efecto de Bloody Penny, pero 100% garantizado, y los corazones spawneados serán aleatorios.
+		Verde Oscuro 	:	Coger un penny causa el efecto del D6. 
+		Amarillo Oscuro :	Efect Eye of Greed + Eye of Belial. Cuando una tear atraviesa a un enemigo, cambia al sprite al de una
+							monetear (las de Head of the Keeper), y si esa tear golpea a otro enemigo les causa midas touch. No homing
+		Amarillo Claro 	:	Transforma todos los pennies en Lucky Pennies cuando aparecen (no afecta a coins que ya hubieran spawneado o que se rerrolleen).
+		
+		Shop
+
+D26: // Ya codificado (faltan arreglar detalles)
+
+	Chaotic Rerolling.
+
+	Activo (6 cargas), coge dos item pools cualesquiera y las intercambia, aparece un mensaje que contiene un mensaje con el siguiente formato:
+	
+	("X" <-> "Y")
+	
+	Siendo X e Y la primera letra de cada uno de los pools intercambiados
+	
+	Por ejemplo, si lo usamos y aparece ("A" <-> "B"), quiere decir que el Angel pool se intercambió o bien con el Boss, con el Beggar o con el Bomb Beggar.
+	
+	T : Treasure Room
+	S : Shop, Secret Room
+	L : Library
+	C : Curse Room
+	B : Boss, Beggar, Bomb Beggar
+	D : Devil Room, Devil Beggar
+	A : Angel Room
+	G : Golden Chest
+	R : Red Chest
+	K : Key Master
+	
+	6 Cargas.
+	
+	Treasure Room
+	
+Greed's Box:
+
+	$$$
+
+	Activo (1 solo uso)
+	
+	https://www.reddit.com/r/bindingofisaac/comments/466wtz/idea_greeds_box/
+	
+	Funciona como pandoras box, pero da dinero según el nivel en el que estés.
+	
+	Basement/Cellar/Burning Basement I 	| 40% Chance to get 60 Coins and 60% Chance to not get anything
+	Basement/Cellar/Burning Basement II | 50% Chance to get 52 Coins and 50% Chance to not get anything
+	Caves/Catacombs/Flooded Caves I 	| 60% Chance to get 44 Coins and 40% Chance to not get anything
+	Caves/Catacombs/Flooded Caves II 	| 70% Chance to get 38 Coins and 30% Chance to not get anything
+	Depths/Necropolis/Dank Depths I 	| 80% Chance to get 30 Coins and 20% Chance to not get anything
+	Depths/Necropolis/Dank Depths II 	| 90% Chance to get 22 Coins and 10% Chance to not get anything
+	Utero/Womb/Scarred Womb and onward (except Blue Womb) | 100% Chance to get 14 Coins
+	Blue Womb | 100% Chance to get Shop Refresh and 45 Coins
+	The Shop (Greed mode) | 100% Chance to get 14 coins
+	Ultra Greed (Greed mode) | 100% Chance to get 75 Coins
+	
+	Shop, Red Chest, Curse Room.
+	
+How To Run:
+
+	How don't you know yet?
+
+	Activo (1 Carga)
+	
+	+0.75 speed durante 10 segundos
+	
+	Tras esto, -0.25 speed durante 3 segundos.
+	
+	Despues vuelta a speed normal.
+	
+	Este item solo se carga con tiempo (le lleva 15 segundos),
+	baterías o completar una habitación no harán nada.
+	
+	Library, Item Room.
+	
+	Cuenta para el Book Worm.
+	
+Mini-Void:
+
+	Consume slightly...
+	
+	Activo (1 Carga)
+	
+	Igual que el void de 6 cargas pero:
+	
+		Succear 1 pasivo solo da 1 stat boost en vez de 2
+		
+		Solo puedes tener un activo succeado, si succeas un activo, el anterior se pierde.
+		
+	Angel / Devil room
+	
+Eden's Spirit:
+
+	Second chance
+
+	Pasivo, igual que judas' shadow pero angelical:
+	
+		Tras morir revives como White Eden
+		
+		Tu run recibe un único reroll (de 1-pip dice room)
+		
+		Tus stats base se randomizan, pero de la siguiente forma:
+			Todos los stats se ponen como Isaac y luego se multiplican por un número aleatorio
+			entre 1 y 1.75.
+			Tu vida será:
+				Un 50% de las veces 3 soul hearts
+				Un 20% de las veces 2 soul hearts
+				Un 30% de las veces 4 soul hearts
+		
+	Angel room
+	
+Stuffed die:
+
+	Temporary Luck way up.
+	
+	Activo, 4 cargas.
+	
+	+15 de Luck en la habitación en la que se use.
+	
+	Shop
+		
+Golden Downgrader: //Desechado
+
+	Devolve your big enemies!
+	
+	Activo (12 cargas)
+	
+	Si hay un boss en la habitación, lo sustituye por la versión más fácil (Por ejemplo si lo usas contra monstro 2 / Gish, se transformará en Monstro)
+	
+	Lista :
+		
+		Monstro -> 1 Ministro
+		
+		Gemini 	} -> 1 Frowning Gaper + 1 Baby
+	
+		Larry Jr -> 1 Chargers por trozo
+		
+		Pin -> 1 Roundy
+		
+		Dingle -> 1 Squirt
+		
+		Gurglings -> 2 Globins
+		
+		Widow -> 1 Blister
+		
+		Bligted Ovum -> Gemini
+		
+		Fistula -> 1 Charger
+		
+		Gurdy Jr 	} -> 2 Gurglings
+		Turdlings	}
+		
+		The Haunt -> 3 Lil' Haunt + 1 Wizoob
+		
+		The Duke of Flies -> 1 Swarmer
+		
+		Rag Man -> 1 Rag's Man Ragling
+		
+		Little Horn -> 1 Smoke ball
+		
+		Dangle -> Dingle
+		
+		Chub -> Grub (3 trozos)
+		
+		Gurdy -> Gurdy Jr
+		
+		Mega Maw -> 1 Psychic Maw
+		
+		Carrion Queen -> Chub
+		
+		Mega Fatty -> 1 Fat Sack
+		
+		The Hollow -> Larry Jr
+		
+		The Husk -> The Duke of Flies
+		
+		Dark One -> 1 Black Maw
+		
+		Polycephalus -> 1 Lump
+		
+		The Frail -> Pin
+		
+		The Stain -> Polycephalus
+		
+		The Forsaken -> The Haunt
+		
+		The Wretched -> Widow
+		
+		Peep -> 1 Fat Sack
+		
+		Big Horn -> Little Horn
+		
+		Rag Mega -> Rag Man
+		
+		The Cage	} -> Mega Fatty
+		Sister Vis	}
+		
+		Monstro II	} -> Monstro
+		Gish		}
+		
+		The Gate -> Mega Maw
+		
+		The Adversary -> Dark One
+		
+		The Bloat -> Peep
+		
+		Mask of Infamy -> 1 Heart + Mask
+		
+		Loki -> 1 I. Blob
+
+		Brownie -> Dangle
+		
+		Mr. Fred -> 1 Fred
+		
+		Scolex -> Pin
+		
+		Mama Gurdy -> Gurdy
+		
+		Lokii -> Loki
+		
+		Blastocyst -> Embryo
+		
+		Daddy Long Legs } -> The Wretched
+		Triachnid		}
+		
+		Teratoma -> Fistula
+		
+		Famine -> Horseman's Head
+		Pestilence -> Famine
+		War -> Pestilence
+		Death 		} -> War
+		Conquest	}
+		
+		Mom -> 2 Mom's Dead Hand
+		
+		Mom's Heart / It Lives -> Mask of Infamy
+		
+		Isaac -> It Lives
+		
+		Satan -> Fallen Gabriel
+		
+		??? / The Lamb -> Isaac
+		
+		Mega Satan -> Satan
+		
+		Super Sin -> Sin
+		
+		No tiene efecto en ->
+		
+			Krampus, Fallen, CHAD, Steven, Super Variants, Uriel, Gabriel, Delirium, Hush, Ultra Greed y Ultra Pride.
+		
+		Secret Room (Para que sea más raro)
+		
+		local tBoss = {
+		EntityType.ENTITY_MONSTRO,
+		EntityType.ENTITY_GEMINI,
+		EntityType.ENTITY_LARRYJR,
+		EntityType.ENTITY_PIN,
+		EntityType.ENTITY_DINGLE,
+		EntityType.ENTITY_GURGLING,
+		EntityType.ENTITY_WIDOW,
+		EntityType.ENTITY_GEMINI, -- Bligthed Ovum
+		EntityType.ENTITY_FISTULA,
+		EntityType.ENTITY_GURDY_JR,
+		EntityType.ENTITY_GURGLING, -- Turdlings
+		EntityType.ENTITY_THE_HAUNT,
+		EntityType.ENTITY_DUKE,
+		EntityType.ENTITY_RAG_MAN,
+		EntityType.ENTITY_LITTLE_HORN,
+		EntityType.ENTITY_DINGLE, -- Dangle
+		
+		EntityType.ENTITY_CHUB,
+		EntityType.ENTITY_GURDY,
+		EntityType.ENTITY_MEGA_MAW,
+		EntityType.ENTITY_CHUB, -- Carrion Queen
+		EntityType.ENTITY_MEGA_FATTY,
+		EntityType.ENTITY_LARRYJR, -- The Hollow
+		}
+
+local tOutput = {
+		{EntityType.ENTITY_MINISTRO},
+		{EntityType.ENTITY_GAPER,EntityType.ENTITY_BABY}
+		{EntityType.ENTITY_CHARGER},
+		{EntityType.ENTITY_ROUNDY},
+		{EntityType.ENTITY_SQUIRT},
+		{EntityType.ENTITY_GLOBIN},
+		{EntityType.ENTITY_BLISTER},
+		{EntityType.ENTITY_},
+		{EntityType.ENTITY_GRUB},
+		{EntityType.ENTITY_GURDY_JR},
+		{EntityType.ENTITY_},
+		}
+		
+local tBossVar = {
+		0, -- Monstro
+		0, -- Gemini
+		0, -- Larry Jr
+		0, -- Pin
+		0, -- Dingle
+		1, -- Gurgling (Boss)
+		0, -- Widow
+		2, -- Bligthed Ovum
+		0, -- Fistula
+		0, -- Gurdy Jr
+		2, -- Turdlings
+		}
+		
+local tOutputVar = {
+
+		}
+		
+local GoldenDowngrader = Isaac.GetItemIdByName("Golden Downgrader")
+
+function ABppmod:GDGrader()
